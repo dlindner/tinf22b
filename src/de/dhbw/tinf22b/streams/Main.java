@@ -58,7 +58,7 @@ public class Main {
 		System.out.println(text2.getClass().getName());
 		System.out.println(text3.getClass().getName());
 		
-		(OurDouble) null;
+		//(OurDouble) null;
 		OurDouble gehtdas = (OurDouble) null;
 
 		AuchEgal<OurDouble, String, Integer, Long> berechnung = (alpha, beta, gamma) -> 42L;
