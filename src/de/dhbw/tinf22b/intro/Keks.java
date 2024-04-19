@@ -6,7 +6,7 @@ public abstract class Keks {
 		super();
 	}
 	
-	public static void verspeise(Keks k) {
+	public /*static*/ void verspeise(/*Keks k*/) {
 		System.out.println("K1: Oh! Krümel...");
 	}
 }
