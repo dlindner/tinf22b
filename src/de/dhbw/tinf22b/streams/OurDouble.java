@@ -4,6 +4,7 @@ public class OurDouble extends Number {
 	
 	public OurDouble() {
 		super();
+		System.out.println("Ich wurde erstellt");
 	}
 
 	public static boolean booleanValue(OurDouble argument) {
@@ -36,5 +37,10 @@ public class OurDouble extends Number {
 	public double doubleValue() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	@Override
+	public String toString() {
+		return "Nö!";
 	}
 }
