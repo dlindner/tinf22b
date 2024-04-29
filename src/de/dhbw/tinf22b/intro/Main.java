@@ -24,7 +24,7 @@ public class Main {
 		subway.getClass().getSimpleName()
 		);
 		switch (subway.getClass().getSimpleName()) {
-			case "Oreo" ->  System.out.println("KX2: Mhm, vergenussferkelisch!");
+			case "Oreo" -> System.out.println("KX2: Mhm, vergenussferkelisch!");
 			case "SubwayKeks" -> System.out.println("KX2: Mhm, vergenussferkelisch!");
 			default -> System.out.println("KX2: Mhm, vergenussferkelisch!");
 		}
