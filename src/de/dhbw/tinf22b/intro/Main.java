@@ -35,10 +35,10 @@ public class Main {
 		
 		oreo.verspeise();
 		subway.verspeise();
-		alleMeineKekse.forEach(Keks::verspeise);
-//		for (Keks each : alleMeineKekse) {
-//			each.verspeise();
-//		}
+		//alleMeineKekse.forEach(Keks::verspeise);
+		for (Keks each : alleMeineKekse) {
+			each.verspeise();
+		}
 		
 		final Krümelmonster monster = new Krümelmonster("Sid");
 		monster.schenke((Keks) oreo);
