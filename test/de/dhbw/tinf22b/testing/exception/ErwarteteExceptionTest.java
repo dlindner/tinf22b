@@ -25,7 +25,7 @@ public class ErwarteteExceptionTest {
 	}
 	
 	// JUnit 4
-	@Test(expected = NullPointerException.class)
+	//@Test(expected = NullPointerException.class) <-- geht mit JUnit 5 nicht mehr
 	void NullPointerException_wird_erwartet4() {
 		// Arrange
 		ErwarteteException target = new ErwarteteException();
