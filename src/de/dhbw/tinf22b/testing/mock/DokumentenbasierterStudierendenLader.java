@@ -4,8 +4,13 @@ import java.util.Map;
 
 public class DokumentenbasierterStudierendenLader {
 
-	public DokumentenbasierterStudierendenLader() {
+	private final Dokumentendatenbank datenquelle;
+
+	public DokumentenbasierterStudierendenLader(
+		Dokumentendatenbank datenquelle
+	) {
 		super();
+		this.datenquelle = datenquelle;
 	}
 	
 	/*
@@ -13,9 +18,10 @@ public class DokumentenbasierterStudierendenLader {
 	 * key1 -> value1
 	 * key2 -> value2
 	 */
-	public Studierend ladeAus(
-		final Map<String, String> dokument
+	public Studierend ladeFür(
+		final String id
 	) {
+		Map<String, String> dokument = this.datenquelle.dokumentFür(id);
 		final String vorname = dokument.getOrDefault("Vorname", "");
 		final String nachname = dokument.getOrDefault("Nachname", "");
 		final String matrikelnummer = dokument.get("Matrikelnummer");
