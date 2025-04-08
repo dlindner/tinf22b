@@ -18,11 +18,7 @@ public class DokumentenbasierterStudierendenLaderTest {
 		// "Leere", "dumme" Instanz
 		
 		// Training
-		Map<String, String> prepared = new HashMap<>();
-		prepared.put("Matrikelnummer", "0123456");
-		prepared.put("Vorname", "Max");
-		prepared.put("Nachname", "Mustermann");
-		Mockito.when(abhängigkeit.dokumentFür(Mockito.eq("0123456"))).thenReturn(prepared);
+		Mockito.when(abhängigkeit.dokumentFür(Mockito.eq("0123456"))).thenReturn(maxMustermann());
 		// "Gerade ausreichend gefüllt", "gerade undumm genug" Instanz
 		
 		DokumentenbasierterStudierendenLader target = new DokumentenbasierterStudierendenLader(
@@ -35,5 +31,13 @@ public class DokumentenbasierterStudierendenLaderTest {
 		// Assert
 		assertEquals("0123456", actual.matrikelnummer());
 		assertEquals("MUSTERMANN, Max", actual.name());
+	}
+
+	private Map<String, String> maxMustermann() {
+		Map<String, String> prepared = new HashMap<>();
+		prepared.put("Matrikelnummer", "0123456");
+		prepared.put("Vorname", "Max");
+		prepared.put("Nachname", "Mustermann");
+		return prepared;
 	}
 }
